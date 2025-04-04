@@ -27,11 +27,11 @@ create_train_data <- function(knowledge_train_data) {
 
     # Let targets be ordered factors, select correct columns, drop NA values
     knowledge_train_data <- knowledge_train_data %>%
-        dplyr::mutate(UNS = factor(.data$UNS,
+        dplyr::mutate(UNS = factor(UNS,
             levels = c("very_low", "Low", "Middle", "High"),
             ordered = TRUE
         )) %>%
-        dplyr::select(.data$STG, .data$PEG, .data$UNS) %>%
+        dplyr::select("STG", "PEG", "UNS") %>%
         tidyr::drop_na()
     return(knowledge_train_data)
 }

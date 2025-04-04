@@ -21,7 +21,7 @@
 create_percentage_table <- function(data, path) {
     num_obs <- nrow(data)
     result <- data %>%
-        dplyr::group_by(.data$UNS) %>%
+        dplyr::group_by(UNS) %>%
         dplyr::summarize(
             count = dplyr::n(),
             percentage = dplyr::n() / num_obs * 100

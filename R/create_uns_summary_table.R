@@ -14,15 +14,15 @@
 #' @importFrom rlang .data
 create_uns_summary_table <- function(data, path) {
   result <- data %>%
-    dplyr::group_by(.data$UNS) %>%
+    dplyr::group_by(UNS) %>%
     dplyr::summarize(
       count = dplyr::n(),
-      mean_STG = mean(.data$STG),
-      mean_PEG = mean(.data$PEG),
-      max_STG = max(.data$STG),
-      max_PEG = max(.data$PEG),
-      min_STG = min(.data$STG),
-      min_PEG = min(.data$PEG)
+      mean_STG = mean("STG"),
+      mean_PEG = mean("PEG"),
+      max_STG = max("STG"),
+      max_PEG = max("PEG"),
+      min_STG = min("STG"),
+      min_PEG = min("PEG")
     )
   readr::write_csv(result, path)
   return(invisible(result))
