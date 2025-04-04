@@ -1,8 +1,11 @@
 Package: dsci310group13functions
-Title: What the Package Does (One Line, Title Case)
+Title: Utility functions for DSCI310 group 13's project analysis.
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+    person("Morgan", "Dean", , "morgandeanhi@gmail.com", role = c("aut", "cre"))
+    person("Adam", "Walmsley", , "email@gmail.com", role = c("aut", "cre"))
+    person("Tracy", "Wang", , "email@gmail.com", role = c("aut", "cre"))
+    person("Yuexiang", "Ni", , "email@gmail.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
