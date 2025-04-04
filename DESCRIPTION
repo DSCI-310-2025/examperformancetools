@@ -1,5 +1,5 @@
 Package: dsci310group13functions
-Title: Utility functions for DSCI310 group 13's project analysis.
+Title: Utility functions for DSCI310 group 13's project analysis
 Version: 0.0.0.9000
 Authors@R: 
     person("Morgan", "Dean", , "morgandeanhi@gmail.com", role = c("aut", "cre"))
