@@ -21,6 +21,9 @@
 #' # Rename the 'old_name' column to 'new_name'
 #' df_renamed <- rename_column(df, "old_name", "new_name")
 #' }
+
+#' @importFrom magrittr %>%
+#' @importFrom rlang :=
 rename_column <- function(df, current_column_name, new_column_name) {
     # Use dplyr::rename with !!sym for non-standard evaluation
     df <- df %>%

@@ -8,16 +8,19 @@
 #'
 #' @return The ggplot object (invisible)
 #' @export
+
+#' @importFrom magrittr %>%
+#' @importFrom rlang .data
 plot_stg_vs_peg_scatter <- function(data, path) {
   plot <- data %>%
-    ggplot(aes(x = STG, y = PEG, colour = UNS)) +
-    labs(
+    ggplot2::ggplot(ggplot2::aes(x = .data$STG, y = .data$PEG, colour = .data$UNS)) +
+    ggplot2::labs(
       x = "Degree of study time",
       y = "Exam performance",
       colour = "Knowledge Level of Users"
     ) +
-    geom_point() +
-    theme(text = element_text(size = 20))
-  ggsave(filename = path, plot = plot, width = 6, height = 4, dpi = 300)
+    ggplot2::geom_point() +
+    ggplot2::theme(text = ggplot2::element_text(size = 20))
+  ggplot2::ggsave(filename = path, plot = plot, width = 6, height = 4, dpi = 300)
   return(invisible(plot))
 }

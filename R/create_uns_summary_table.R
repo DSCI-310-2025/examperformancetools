@@ -9,19 +9,22 @@
 #'
 #' @return A summary data frame (invisible)
 #' @export
+
+#' @importFrom magrittr %>%
+#' @importFrom rlang .data
 create_uns_summary_table <- function(data, path) {
   result <- data %>%
-    group_by(UNS) %>%
-    summarize(
-      count = n(),
-      mean_STG = mean(STG),
-      mean_PEG = mean(PEG),
-      max_STG = max(STG),
-      max_PEG = max(PEG),
-      min_STG = min(STG),
-      min_PEG = min(PEG)
+    dplyr::group_by(.data$UNS) %>%
+    dplyr::summarize(
+      count = dplyr::n(),
+      mean_STG = mean(.data$STG),
+      mean_PEG = mean(.data$PEG),
+      max_STG = max(.data$STG),
+      max_PEG = max(.data$PEG),
+      min_STG = min(.data$STG),
+      min_PEG = min(.data$PEG)
     )
-  write_csv(result, path)
+  readr::write_csv(result, path)
   return(invisible(result))
 }
 

@@ -18,18 +18,21 @@
 #' # Prepare the training data
 #' clean_data <- create_train_data(raw_data)
 #' }
+
+#' @importFrom magrittr %>%
+#' @importFrom rlang .data
 create_train_data <- function(knowledge_train_data) {
     # convert necessary targets to correct format
     knowledge_train_data[knowledge_train_data == "Very Low"] <- "very_low"
 
     # Let targets be ordered factors, select correct columns, drop NA values
     knowledge_train_data <- knowledge_train_data %>%
-        mutate(UNS = factor(UNS,
+        dplyr::mutate(UNS = factor(.data$UNS,
             levels = c("very_low", "Low", "Middle", "High"),
             ordered = TRUE
         )) %>%
-        dplyr::select(STG, PEG, UNS) %>%
-        drop_na()
+        dplyr::select(.data$STG, .data$PEG, .data$UNS) %>%
+        tidyr::drop_na()
     return(knowledge_train_data)
 }
 

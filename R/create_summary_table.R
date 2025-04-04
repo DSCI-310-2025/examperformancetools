@@ -1,5 +1,3 @@
-# Table functions
-
 #' Create a summary table with the first 6 rows of data
 #'
 #' This function takes a data frame and creates a summary table by selecting
@@ -17,8 +15,11 @@
 #' # Create a summary table of the knowledge_train_data
 #' create_summary_table(knowledge_train_data, "results/table1.csv")
 #' }
+
+#' @importFrom magrittr %>%
+#' @importFrom rlang .data
 create_summary_table <- function(data, path) {
-    result <- head(data, 6)
-    write_csv(result, path)
+    result <- utils::head(data, 6)
+    readr::write_csv(result, path)
     return(invisible(result))
 }

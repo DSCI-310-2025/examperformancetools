@@ -18,18 +18,21 @@
 #' # Prepare the test data
 #' clean_data <- create_test_data(raw_data)
 #' }
+
+#' @importFrom magrittr %>%
+#' @importFrom rlang .data
 create_test_data <- function(knowledge_test_data) {
     # convert necessary targets to correct format
     knowledge_test_data[knowledge_test_data == "Very Low"] <- "very_low"
 
     # Let targets be ordered factors, select correct columns, drop NA values
     knowledge_test_data <- knowledge_test_data %>%
-        mutate(UNS = factor(UNS,
+        dplyr::mutate(UNS = factor(.data$UNS,
             levels = c("very_low", "Low", "Middle", "High"),
             ordered = TRUE
         )) %>%
-        dplyr::select(STG, PEG, UNS) %>%
-        drop_na()
+        dplyr::select(.data$STG, .data$PEG, .data$UNS) %>%
+        tidyr::drop_na()
     return(knowledge_test_data)
 }
 

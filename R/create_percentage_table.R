@@ -15,15 +15,18 @@
 #' # Create a percentage table for knowledge levels in training data
 #' create_percentage_table(knowledge_train_data, "results/table3.csv")
 #' }
+
+#' @importFrom magrittr %>%
+#' @importFrom rlang .data
 create_percentage_table <- function(data, path) {
     num_obs <- nrow(data)
     result <- data %>%
-        group_by(UNS) %>%
-        summarize(
-            count = n(),
-            percentage = n() / num_obs * 100
+        dplyr::group_by(.data$UNS) %>%
+        dplyr::summarize(
+            count = dplyr::n(),
+            percentage = dplyr::n() / num_obs * 100
         )
-    write_csv(result, path)
+    readr::write_csv(result, path)
     return(invisible(result))
 }
 
