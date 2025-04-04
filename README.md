@@ -1,18 +1,17 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# dsci310group13functions
+# examperformancetools
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-The goal of dsci310group13functions is to …
+The goal of examperformancetools is to …
 
 ## Installation
 
-You can install the development version of dsci310group13functions like
-so:
+You can install the development version of examperformancetools like so:
 
 ``` r
 # FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
@@ -23,7 +22,7 @@ so:
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(dsci310group13functions)
+library(examperformancetools)
 ## basic example code
 ```
 

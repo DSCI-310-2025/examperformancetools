@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(dsci310group13functions)
+library(examperformancetools)
 
-test_check("dsci310group13functions")
+test_check("examperformancetools")
