@@ -17,8 +17,37 @@ The goal of examperformancetools is to …
 You can install the development version of examperformancetools like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("DSCI-310-2025/examperformancetools")
 ```
+
+
+
+# examperformancetools 📊
+
+`examperformancetools` is an R package that provides simple, reusable functions for cleaning, summarizing, and visualizing data from the **UCI Student Knowledge Modeling Dataset**. It's designed to streamline the data processing workflow for student performance classification and modeling.
+
+## 📦 What's Inside
+
+This package includes functions for:
+- Cleaning and preparing training/testing data (`create_train_data`, `create_test_data`)
+- Renaming columns dynamically (`rename_column`)
+- Summarizing user scores (`create_summary_table`, `create_uns_summary_table`)
+- Creating percentage breakdowns (`create_percentage_table`)
+- Generating scatter plots between predictors (`plot_stg_vs_peg_scatter`)
+
+## 🎯 Why Use This Package?
+
+There are existing packages in R such as:
+- `dplyr`, `tidyr` – general-purpose data wrangling
+- `skimr`, `summarytools` – for summary stats
+- `ggplot2` – for flexible visualizations
+
+However, `examperformancetools` is designed specifically for:
+- Student modeling and classification workflows
+- Custom summary tables and educational indicators
+- Fast integration with academic datasets like the **UCI Data User Modeling Dataset**
+
+It simplifies repetitive tasks into single-line commands with clean, tested outputs, and is ideal for teaching, assignments, or prototyping in education-related data science.
 
 ## Example
 
@@ -52,3 +81,7 @@ You can also embed plots, for example:
 
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub and CRAN.
+
+
+
+
