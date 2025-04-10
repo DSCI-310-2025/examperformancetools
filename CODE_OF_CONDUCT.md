@@ -52,11 +52,10 @@ If you witness or experience a violation of this Code of Conduct, please reach o
 
 **Current Group 13 Contacts:**
 
-# add your info here and delete this line # 
 - [Yuexiang Ni], email: [wonyxaxx@gmail.com]
-- [Add member name], email: [your_email_2@example.com]
-- [Add member name], email: [your_email_3@example.com]
-- [Add member name], email: [your_email_4@example.com]
+- [Tracy Wang], email: [wxrtracy@gmail.com]
+- [Morgan Dean], email: [morgandeanhi@gmail.com]
+- [Adam Walmsley], email: [adam.walmsley0123@gmail.com]
 
 All concerns will be reviewed by the team and addressed in a timely and appropriate manner.
 
