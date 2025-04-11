@@ -9,15 +9,38 @@
 ![Coverage](https://byob.yarr.is/DSCI-310-2025/examperformancetools/coverage)
 <!-- badges: end -->
 
-The goal of examperformancetools is to …
+`examperformancetools` is an R package that provides simple, reusable functions for cleaning, summarizing, and visualizing data from the **UCI Student Knowledge Modeling Dataset**. It's designed to streamline the data processing workflow for student performance classification and modeling.
 
 ## Installation
 
 You can install the development version of examperformancetools like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("DSCI-310-2025/examperformancetools")
 ```
+
+##  What's Inside
+
+This package includes functions for:
+- Cleaning and preparing training/testing data (`create_train_data`, `create_test_data`)
+- Renaming columns dynamically (`rename_column`)
+- Summarizing user scores (`create_summary_table`, `create_uns_summary_table`)
+- Creating percentage breakdowns (`create_percentage_table`)
+- Generating scatter plots between predictors (`plot_stg_vs_peg_scatter`)
+
+##  Why Use This Package?
+
+There are existing packages in R such as:
+- `dplyr`, `tidyr` – general-purpose data wrangling
+- `skimr`, `summarytools` – for summary stats
+- `ggplot2` – for flexible visualizations
+
+However, `examperformancetools` is designed specifically for:
+- Student modeling and classification workflows
+- Custom summary tables and educational indicators
+- Fast integration with academic datasets like the **UCI Data User Modeling Dataset**
+
+It simplifies repetitive tasks into single-line commands with clean, tested outputs, and is ideal for teaching, assignments, or prototyping in education-related data science.
 
 ## Example
 
@@ -25,29 +48,43 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(examperformancetools)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+Here’s a demo section that introduces and demonstrates the usage of the `rename_column()` and `create_summary_table()` functions clearly and visually:
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+---
+
+### Rename columns with `rename_column()`
+
+This function renames a column in a data frame from its old name to a new one, using tidy evaluation.
+
+```
+# Create a sample data frame
+df <- data.frame(
+  old_name = c(1, 2, 3, 4, 5, 6),
+  other_col = c("A", "B", "C", "D", "E", "F")
+)
+
+# Rename 'old_name' to 'new_name'
+df_renamed <- rename_column(df, "old_name", "new_name")
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+The function takes the current column name and the new column name as strings.
 
-You can also embed plots, for example:
+---
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+### Create summary tables with `create_summary_table()`
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+This function saves the first six rows of a data frame to a CSV file, ideal for quick inspection of  data.
+```
+# Save the first 6 rows of the dataset to a CSV file
+create_summary_table(df_renamed, "results/table1.csv")
+```
+
+It returns the top of the data frame invisibly and writes it to the specified path.
+
+
+
+
+
+
