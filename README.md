@@ -6,8 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/DSCI-310-2025/examperformancetools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/examperformancetools/actions/workflows/R-CMD-check.yaml)
-[![Codecov test
-coverage](https://codecov.io/gh/DSCI-310-2025/examperformancetools/graph/badge.svg)](https://app.codecov.io/gh/DSCI-310-2025/examperformancetools)
+![Coverage](https://byob.yarr.is/DSCI-310-2025/examperformancetools/coverage)
 <!-- badges: end -->
 
 `examperformancetools` is an R package that provides simple, reusable functions for cleaning, summarizing, and visualizing data from the **UCI Student Knowledge Modeling Dataset**. It's designed to streamline the data processing workflow for student performance classification and modeling.
