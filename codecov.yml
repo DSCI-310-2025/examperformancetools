@@ -1,0 +1,17 @@
+comment: false
+
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 70%
+        informational: true
+    patch:
+      default:
+        target: auto
+        threshold: 70%
+        informational: true
+
+codecov:
+  require_ci_to_pass: yes
