@@ -13,7 +13,7 @@
 #' @importFrom rlang .data
 plot_stg_vs_peg_scatter <- function(data, path) {
   plot <- data %>%
-    ggplot2::ggplot(ggplot2::aes(x = "STG", y = "PEG", colour = "UNS")) +
+    ggplot2::ggplot(ggplot2::aes(x = STG, y = PEG, colour = UNS)) +
     ggplot2::labs(
       x = "Degree of study time",
       y = "Exam performance",
