@@ -17,12 +17,12 @@ create_uns_summary_table <- function(data, path) {
     dplyr::group_by(UNS) %>%
     dplyr::summarize(
       count = dplyr::n(),
-      mean_STG = mean("STG"),
-      mean_PEG = mean("PEG"),
-      max_STG = max("STG"),
-      max_PEG = max("PEG"),
-      min_STG = min("STG"),
-      min_PEG = min("PEG")
+      mean_STG = mean(STG),
+      mean_PEG = mean(PEG),
+      max_STG = max(STG),
+      max_PEG = max(PEG),
+      min_STG = min(STG),
+      min_PEG = min(PEG)
     )
   readr::write_csv(result, path)
   return(invisible(result))
