@@ -31,7 +31,7 @@ create_test_data <- function(knowledge_test_data) {
             levels = c("very_low", "Low", "Middle", "High"),
             ordered = TRUE
         )) %>%
-        dplyr::select("STG", "PEG", "UNS") %>%
+        dplyr::select(STG, PEG, UNS) %>%
         tidyr::drop_na()
     return(knowledge_test_data)
 }

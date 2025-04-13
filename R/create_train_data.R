@@ -31,7 +31,7 @@ create_train_data <- function(knowledge_train_data) {
             levels = c("very_low", "Low", "Middle", "High"),
             ordered = TRUE
         )) %>%
-        dplyr::select("STG", "PEG", "UNS") %>%
+        dplyr::select(STG, PEG, UNS) %>%
         tidyr::drop_na()
     return(knowledge_train_data)
 }
