@@ -19,20 +19,6 @@
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 create_summary_table <- function(data, path) {
-  # Check: is data frame
-  if (!is.data.frame(data)) {
-    stop("Input must be a data frame.")
-  }
-  
-  # Check: warn for empty df
-  if (nrow(data) == 0) {
-    warning("Input data frame is empty. Output file will also be empty.")
-  }
-  
-  # Check: file name
-  if (!grepl("\\.csv$", path)) {
-    warning("Output path does not end in .csv. Consider adding .csv extension.")
-  }
     result <- utils::head(data, 6)
     readr::write_csv(result, path)
     return(invisible(result))

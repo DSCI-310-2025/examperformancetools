@@ -27,23 +27,3 @@ test_that("create_summary_table creates a CSV with the first 6 rows", {
   
   file.remove(temp_file)
 })
-
-# Test: input is not a data frame
-test_that("create_summary_table throws error if input is not a data frame", {
-  expect_error(create_summary_table(list(a = 1:5), temp_file))
-})
-
-# Test: input is an empty data frame
-test_that("create_summary_table warns when input data is empty", {
-  temp_file <- tempfile(fileext = ".csv")
-  empty_df <- data.frame()
-  expect_warning(create_summary_table(empty_df, temp_file))
-  file.remove(temp_file)
-})
-
-# Test: output file does not end with .csv
-test_that("create_summary_table warns if output path does not end with .csv", {
-  temp_file <- tempfile(fileext = "")  # no extension
-  expect_warning(create_summary_table(test_data, temp_file))
-  file.remove(temp_file)
-})
