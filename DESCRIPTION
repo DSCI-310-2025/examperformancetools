@@ -1,6 +1,6 @@
 Package: examperformancetools
 Title: Utility functions for DSCI310 group 13's project analysis
-Version: 3.0.1
+Version: 3.0.2
 Authors@R: 
     person("Morgan", "Dean", , "morgandeanhi@gmail.com", role = c("aut", "cre"))
     person("Adam", "Walmsley", , "email@gmail.com", role = c("aut", "cre"))
